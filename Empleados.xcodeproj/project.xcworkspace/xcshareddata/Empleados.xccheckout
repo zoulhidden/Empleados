@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7E50ECC3-A1ED-482F-A5EE-C1AD0FA6E59C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Empleados</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>08F2CB15D479ACAFDAC2804B50D5E268FB2E131D</key>
+		<string>https://github.com/zoulhidden/Empleados.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Empleados.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>08F2CB15D479ACAFDAC2804B50D5E268FB2E131D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zoulhidden/Empleados.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>08F2CB15D479ACAFDAC2804B50D5E268FB2E131D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08F2CB15D479ACAFDAC2804B50D5E268FB2E131D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Empleados</string>
+		</dict>
+	</array>
+</dict>
+</plist>
