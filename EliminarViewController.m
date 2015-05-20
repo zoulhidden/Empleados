@@ -7,8 +7,11 @@
 //
 
 #import "EliminarViewController.h"
+#import "Empleado.h"
 
-@interface EliminarViewController ()
+@interface EliminarViewController (){
+    Empleado *eliminarEmpleado;
+}
 
 @end
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    eliminarEmpleado =[[Empleado alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +38,11 @@
 }
 */
 
+- (IBAction)eliminarButton:(id)sender {
+    eliminarEmpleado.empCedula = _txtCedula.text;
+    [eliminarEmpleado deleteFromDatabase];
+    
+    _labelStatus.text=eliminarEmpleado.status;
+    _txtCedula.text= @"";
+}
 @end

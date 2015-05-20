@@ -22,7 +22,9 @@
 @property NSString *status;
 
 -(void)createDatabaseInDocuments;
--(void)searchEmployedInDataBasebyId:(NSString *)cedula;
+-(BOOL)searchEmployedInDataBasebyId;
 -(void)createEmployedInDataBase;
+-(void)updateInDatabase;
+-(void)deleteFromDatabase;
 
 @end

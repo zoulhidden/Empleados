@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876D25271B0CACF8000EE030 /* EliminarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876D25261B0CACF8000EE030 /* EliminarViewController.m */; };
 		8797AB211AF0F4CC0053F009 /* InsertarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8797AB201AF0F4CC0053F009 /* InsertarViewController.m */; };
 		8797AB241AF0F4DB0053F009 /* BuscarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8797AB231AF0F4DB0053F009 /* BuscarViewController.m */; };
 		8797AB271AF0F4ED0053F009 /* Empleado.m in Sources */ = {isa = PBXBuildFile; fileRef = 8797AB261AF0F4ED0053F009 /* Empleado.m */; };
@@ -18,6 +19,7 @@
 		879B31AB1AEA69DC0059BE3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879B31AA1AEA69DC0059BE3B /* Images.xcassets */; };
 		879B31AE1AEA69DC0059BE3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879B31AC1AEA69DC0059BE3B /* LaunchScreen.xib */; };
 		879B31BA1AEA69DC0059BE3B /* EmpleadosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B31B91AEA69DC0059BE3B /* EmpleadosTests.m */; };
+		87A03BCA1B06129700CDFA7F /* ActualizarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A03BC91B06129700CDFA7F /* ActualizarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		876D25251B0CACF8000EE030 /* EliminarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliminarViewController.h; sourceTree = "<group>"; };
+		876D25261B0CACF8000EE030 /* EliminarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliminarViewController.m; sourceTree = "<group>"; };
 		8797AB1F1AF0F4CC0053F009 /* InsertarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertarViewController.h; sourceTree = "<group>"; };
 		8797AB201AF0F4CC0053F009 /* InsertarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertarViewController.m; sourceTree = "<group>"; };
 		8797AB221AF0F4DB0053F009 /* BuscarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuscarViewController.h; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		879B31B31AEA69DC0059BE3B /* EmpleadosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpleadosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879B31B81AEA69DC0059BE3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879B31B91AEA69DC0059BE3B /* EmpleadosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmpleadosTests.m; sourceTree = "<group>"; };
+		87A03BC81B06129700CDFA7F /* ActualizarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActualizarViewController.h; sourceTree = "<group>"; };
+		87A03BC91B06129700CDFA7F /* ActualizarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualizarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,10 @@
 		879B31911AEA69DC0059BE3B = {
 			isa = PBXGroup;
 			children = (
+				876D25251B0CACF8000EE030 /* EliminarViewController.h */,
+				876D25261B0CACF8000EE030 /* EliminarViewController.m */,
+				87A03BC81B06129700CDFA7F /* ActualizarViewController.h */,
+				87A03BC91B06129700CDFA7F /* ActualizarViewController.m */,
 				8797AB281AF0F5250053F009 /* libsqlite3.dylib */,
 				8797AB251AF0F4ED0053F009 /* Empleado.h */,
 				8797AB261AF0F4ED0053F009 /* Empleado.m */,
@@ -238,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A03BCA1B06129700CDFA7F /* ActualizarViewController.m in Sources */,
 				8797AB271AF0F4ED0053F009 /* Empleado.m in Sources */,
 				879B31A61AEA69DC0059BE3B /* ViewController.m in Sources */,
+				876D25271B0CACF8000EE030 /* EliminarViewController.m in Sources */,
 				879B31A31AEA69DC0059BE3B /* AppDelegate.m in Sources */,
 				8797AB211AF0F4CC0053F009 /* InsertarViewController.m in Sources */,
 				879B31A01AEA69DC0059BE3B /* main.m in Sources */,

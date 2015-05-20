@@ -50,12 +50,15 @@
 }
 
 
--(void)searchEmployedInDataBasebyId:(NSString *)cedula{
+-(BOOL)searchEmployedInDataBasebyId{
+    
+    
+    
     [self searchPathDatabase];
     const char * db = [_databasePath UTF8String];
     sqlite3_stmt * query;
     if(sqlite3_open(db, &empleadosdb) == SQLITE_OK){
-        NSString * select = [NSString stringWithFormat:@"SELECT * FROM EMPLOYESS WHERE EMP_CEDULA = \"%@\"", cedula];
+        NSString * select = [NSString stringWithFormat:@"SELECT * FROM EMPLOYESS WHERE EMP_CEDULA = \"%@\"", _empCedula];
         const char * select_sql = [select UTF8String];
         
         if(sqlite3_prepare_v2(empleadosdb, select_sql, -1, &query, NULL) == SQLITE_OK){
@@ -67,17 +70,23 @@
                 _empAge = [NSString  stringWithFormat:@"%s", sqlite3_column_text(query, 3)];
                 _empAdress = [NSString  stringWithFormat:@"%s", sqlite3_column_text(query, 4)];
                 
+                
             }else{
                 _status = @"Registro no encontrado.";
+                return NO;
             }
         }else{
             _status = @"Error en el query.";
+            return NO;
         }
         sqlite3_finalize(query);
         sqlite3_close(empleadosdb);
+        
     }else{
         _status = @"No se pudo abrir la base de datos.";
+        return NO;
     }
+    return YES;
 }
 
 -(void)createEmployedInDataBase{
@@ -100,5 +109,52 @@
         _status = @"No se pudo abrir la base de datos.";
     }
 }
+
+-(void) updateInDatabase{
+    
+    [self searchPathDatabase];
+    sqlite3_stmt *query;
+    const char * db = [_databasePath UTF8String];
+    if (sqlite3_open(db, &empleadosdb)==SQLITE_OK) {
+        NSString * update =[NSString stringWithFormat:@"UPDATE EMPLOYESS SET EMP_NAME= \"%@\", EMP_AGE= \"%@\", EMP_ADRESS= \"%@\"  WHERE EMP_CEDULA = \"%@\"", _empName,_empAge,_empAdress, _empCedula];
+        const char * update_sql =[update UTF8String];
+        sqlite3_prepare_v2(empleadosdb, update_sql, -1, &query, NULL);
+        if (sqlite3_step(query)==SQLITE_DONE) {
+            _status = @"Registro Actualizado con exito";
+        }else{
+            _status =@"Fallo al actualizar registro";
+        }
+        sqlite3_finalize(query);
+        sqlite3_close(empleadosdb);
+    }else{
+        _status =@"Fallo al acceder a la base de datos";
+    }
+}
+
+-(void) deleteFromDatabase{
+    
+    
+    [self searchPathDatabase];
+    sqlite3_stmt * query;
+    const char * db = [_databasePath UTF8String];
+    if (sqlite3_open(db, &empleadosdb)==SQLITE_OK) {
+        NSString *selectDelete =[NSString stringWithFormat:@"delete FROM EMPLOYESS WHERE EMP_CEDULA = \"%@\"", _empCedula];
+        const char * delete_sql =[selectDelete UTF8String];
+        sqlite3_prepare_v2(empleadosdb, delete_sql, -1, &query, NULL);
+        if (sqlite3_step(query)==SQLITE_DONE) {
+            _status =@"Registro eliminado!";
+        }else{
+            _status =@"Registro no existe";
+            
+        }
+        sqlite3_finalize(query);
+        sqlite3_close(empleadosdb);
+    }else{
+        _status=@"Fallo al acceder a la base de datos";
+    }
+    
+    
+}
+
 
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "ActualizarViewController.h"
+#import "Empleado.h"
 
-@interface ActualizarViewController ()
+@interface ActualizarViewController (){
+    
+    Empleado *actualizarEmpleado;
+    Empleado *buscarEmpleado;
+    
+}
 
 @end
 
@@ -17,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    actualizarEmpleado = [[Empleado alloc]init];
+    buscarEmpleado = [[Empleado alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +42,26 @@
 }
 */
 
+- (IBAction)buscarButton:(id)sender {
+    buscarEmpleado.empCedula = _cedulaTxt.text;
+    [buscarEmpleado searchEmployedInDataBasebyId];
+    
+    _cedulaTxt.text=buscarEmpleado.empCedula;
+    _nombreTxt.text=buscarEmpleado.empName;
+    _direccionTxt.text=buscarEmpleado.empAdress;
+    _edadTxt.text=buscarEmpleado.empAge;
+    
+    _lblStatus.text=buscarEmpleado.status;
+}
+
+- (IBAction)actualizarButton:(id)sender {
+    actualizarEmpleado.empName = _nombreTxt.text;
+    actualizarEmpleado.empCedula=_cedulaTxt.text;
+    actualizarEmpleado.empAdress= _direccionTxt.text;
+    actualizarEmpleado.empAge=_edadTxt.text;
+    
+    [actualizarEmpleado updateInDatabase];
+    
+    _lblStatus.text = actualizarEmpleado.status;
+}
 @end

@@ -9,5 +9,8 @@
 #import "ViewController.h"
 
 @interface EliminarViewController : ViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtCedula;
+@property (strong, nonatomic) IBOutlet UILabel *labelStatus;
+- (IBAction)eliminarButton:(id)sender;
 
 @end
