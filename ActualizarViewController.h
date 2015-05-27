@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *direccionTxt;
 @property (strong, nonatomic) IBOutlet UITextField *edadTxt;
 @property (strong, nonatomic) IBOutlet UILabel *lblStatus;
+//----------------------------------
 - (IBAction)buscarButton:(id)sender;
 - (IBAction)actualizarButton:(id)sender;
 

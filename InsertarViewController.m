@@ -39,6 +39,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     for(UIView * view in self.view.subviews){
         [view resignFirstResponder];
+        //
     }
     
 }

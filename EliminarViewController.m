@@ -41,7 +41,7 @@
 - (IBAction)eliminarButton:(id)sender {
     eliminarEmpleado.empCedula = _txtCedula.text;
     [eliminarEmpleado deleteFromDatabase];
-    
+    // ----------------------------
     _labelStatus.text=eliminarEmpleado.status;
     _txtCedula.text= @"";
 }

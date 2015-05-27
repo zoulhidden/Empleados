@@ -45,7 +45,7 @@
 - (IBAction)buscarButton:(id)sender {
     buscarEmpleado.empCedula = _cedulaTxt.text;
     [buscarEmpleado searchEmployedInDataBasebyId];
-    
+    // ----------------------------------
     _cedulaTxt.text=buscarEmpleado.empCedula;
     _nombreTxt.text=buscarEmpleado.empName;
     _direccionTxt.text=buscarEmpleado.empAdress;
